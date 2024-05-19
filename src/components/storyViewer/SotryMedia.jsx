@@ -1,17 +1,21 @@
 import React from 'react'
 import { getMediaType } from '../../utils/helper'
+import { useParams } from 'react-router'
 
 
-const SotryMedia = ({ story }) => {
+const SotryMedia = ({story}) => {
 
-    // const mediaType = getMediaType(story?.mediaUrl)
+    
+
+
+    const mediaType = getMediaType(story?.mediaUrl)
 
   return (
       <div className='w-full h-full'>
          
-          {<img src='https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg?size=626&ext=jpg&ga=GA1.1.44546679.1715990400&semt=sph' alt="Media Content" className='object-cover w-full h-full' />}
-          {/* {mediaType === 'video' && <video src={mediaUrl} controls className='object-cover w-full h-full' />}
-          {mediaType === 'unsupported' && <p className='w-full h-full bg-black'>Unsupported media type</p>} */}
+          {mediaType === 'image' && <img src={story.mediaUrl} alt="Media Content" className='object-cover w-full h-full' />}
+          {mediaType === 'video' && <video src={story?.mediaUrl} controls className='object-cover w-full h-full' />}
+          {mediaType === 'unsupported' && <p className='w-full h-full bg-black'>Unsupported media type</p>}
     </div>
   )
 }

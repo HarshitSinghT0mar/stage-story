@@ -9,6 +9,6 @@ export const getMediaType = (url) => {
     } else if (videoExtensions.includes(extension)) {
         return 'video';
     } else {
-        return 'unsupported';
+        return 'image';
     }
 };
