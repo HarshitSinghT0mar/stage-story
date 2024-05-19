@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        hind: ["Hind", "sans-serif"],
+      },
       colors: {
         primary: '#7C120C'
       }

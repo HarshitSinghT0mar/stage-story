@@ -3,11 +3,11 @@ import StoryListItem from './StoryListItem'
 
 
 
-const StoryList = () => {
+const StoryList = ({stories}) => {
   return (
-      <div className='flex gap-4 overflow-x-scroll'>
-          {[...new Array(20)].map((story, index) => {
-              return <StoryListItem key={ index} />
+      <div className='flex gap-6 overflow-x-scroll'>
+          {stories?.users?.map((user, index) => {
+            return <StoryListItem user={ user} key={index} />
           })}
     </div>
   )
