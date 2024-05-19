@@ -7,7 +7,7 @@ function App() {
  
 
   return (
-    <div className='p-4 font-hind'>
+    <div className='p-2 sm:p-4 font-hind flex justify-center'>
       <AppRoutes />
     </div>
   )

@@ -6,9 +6,8 @@ import { useNavigate } from 'react-router'
 const StoryListContainer = () => {
     const navigate=useNavigate()
     const handleStoryClick = (user) => {
-        navigate(`/stories/${user?.name}/${user?.stories[0]?.id}`)
+        navigate(`/stories/${user?.username}/${user?.stories[0]?.id}`)
     }
-
     
   return (
     <StoryList stories={stories} onStoryClick={handleStoryClick} />

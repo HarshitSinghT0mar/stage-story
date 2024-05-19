@@ -2,7 +2,7 @@ export const stories = {
     "users": [
         {
             "id": "user1",
-            "name": "Alice",
+            "username": "Alice",
             "stories": [
                 {
                     "id": "story1",
@@ -20,7 +20,7 @@ export const stories = {
         },
         {
             "id": "user2",
-            "name": "Bob",
+            "username": "Bob",
             "stories": [
                 {
                     "id": "story3",
@@ -44,7 +44,7 @@ export const stories = {
         },
         {
             "id": "user3",
-            "name": "Charlie",
+            "username": "Charlie",
             "stories": [
                 {
                     "id": "story6",
@@ -56,7 +56,7 @@ export const stories = {
         },
         {
             "id": "user4",
-            "name": "David",
+            "username": "David",
             "stories": [
                 {
                     "id": "story7",
@@ -80,7 +80,7 @@ export const stories = {
         },
         {
             "id": "user5",
-            "name": "Eve",
+            "username": "Eve",
             "stories": [
                 {
                     "id": "story10",
@@ -98,7 +98,7 @@ export const stories = {
         },
         {
             "id": "user6",
-            "name": "Frank",
+            "username": "Frank",
             "stories": [
                 {
                     "id": "story12",
@@ -128,7 +128,7 @@ export const stories = {
         },
         {
             "id": "user7",
-            "name": "Grace",
+            "username": "Grace",
             "stories": [
                 {
                     "id": "story16",
@@ -140,7 +140,7 @@ export const stories = {
         },
         {
             "id": "user8",
-            "name": "Hank",
+            "username": "Hank",
             "stories": [
                 {
                     "id": "story17",
@@ -158,7 +158,7 @@ export const stories = {
         },
         {
             "id": "user9",
-            "name": "Ivy",
+            "username": "Ivy",
             "stories": [
                 {
                     "id": "story19",
@@ -176,7 +176,7 @@ export const stories = {
         },
         {
             "id": "user10",
-            "name": "Jack",
+            "username": "Jack",
             "stories": [
                 {
                     "id": "story21",
@@ -200,7 +200,7 @@ export const stories = {
         },
         {
             "id": "user11",
-            "name": "Kate",
+            "username": "Kate",
             "stories": [
                 {
                     "id": "story24",
@@ -218,7 +218,7 @@ export const stories = {
         },
         {
             "id": "user12",
-            "name": "Leo",
+            "username": "Leo",
             "stories": [
                 {
                     "id": "story26",
@@ -236,7 +236,7 @@ export const stories = {
         },
         {
             "id": "user13",
-            "name": "Mia",
+            "username": "Mia",
             "stories": [
                 {
                     "id": "story28",
@@ -260,7 +260,7 @@ export const stories = {
         },
         {
             "id": "user14",
-            "name": "Noah",
+            "username": "Noah",
             "stories": [
                 {
                     "id": "story31",
@@ -272,8 +272,10 @@ export const stories = {
         },
         {
             "id": "user15",
-            "name": "Olivia",
-            "stories": [
+            "username": "Olivia",
+           
+
+ "stories": [
                 {
                     "id": "story32",
                     "mediaUrl": "https://example.com/story32.mp4",
@@ -284,7 +286,7 @@ export const stories = {
         },
         {
             "id": "user16",
-            "name": "Paul",
+            "username": "Paul",
             "stories": [
                 {
                     "id": "story33",
@@ -302,7 +304,7 @@ export const stories = {
         },
         {
             "id": "user17",
-            "name": "Quinn",
+            "username": "Quinn",
             "stories": [
                 {
                     "id": "story35",
@@ -314,7 +316,7 @@ export const stories = {
         },
         {
             "id": "user18",
-            "name": "Rachel",
+            "username": "Rachel",
             "stories": [
                 {
                     "id": "story36",
@@ -338,7 +340,7 @@ export const stories = {
         },
         {
             "id": "user19",
-            "name": "Sam",
+            "username": "Sam",
             "stories": [
                 {
                     "id": "story39",
@@ -350,7 +352,7 @@ export const stories = {
         },
         {
             "id": "user20",
-            "name": "Tina",
+            "username": "Tina",
             "stories": [
                 {
                     "id": "story40",
