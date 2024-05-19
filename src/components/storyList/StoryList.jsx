@@ -3,11 +3,12 @@ import StoryListItem from './StoryListItem'
 
 
 
-const StoryList = ({stories}) => {
+const StoryList = ({ stories, onStoryClick }) => {
+  
   return (
       <div className='flex gap-6 overflow-x-scroll'>
           {stories?.users?.map((user, index) => {
-            return <StoryListItem user={ user} key={index} />
+            return <StoryListItem user={ user} key={index} onClick={()=>onStoryClick(user)}  />
           })}
     </div>
   )
