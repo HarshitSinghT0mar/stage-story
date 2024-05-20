@@ -1,4 +1,3 @@
-
 export const stories = {
     "users": [
         {
@@ -14,7 +13,7 @@ export const stories = {
                 },
                 {
                     "id": "story2",
-                    "mediaUrl": "https://www.example.com/story2.mp4",
+                    "mediaUrl": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
                     "type": "video",
                     "timestamp": "2024-05-18T12:00:00Z"
                 }
@@ -33,7 +32,7 @@ export const stories = {
                 },
                 {
                     "id": "story4",
-                    "mediaUrl": "https://www.example.com/story4.mp4",
+                    "mediaUrl": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
                     "type": "video",
                     "timestamp": "2024-05-18T15:00:00Z"
                 },
@@ -71,7 +70,7 @@ export const stories = {
                 },
                 {
                     "id": "story8",
-                    "mediaUrl": "https://www.example.com/story8.mp4",
+                    "mediaUrl": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
                     "type": "video",
                     "timestamp": "2024-05-18T12:00:00Z"
                 },
@@ -90,7 +89,7 @@ export const stories = {
             "stories": [
                 {
                     "id": "story10",
-                    "mediaUrl": "https://www.example.com/story10.mp4",
+                    "mediaUrl": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
                     "type": "video",
                     "timestamp": "2024-05-18T15:00:00Z"
                 },
@@ -115,7 +114,7 @@ export const stories = {
                 },
                 {
                     "id": "story13",
-                    "mediaUrl": "https://www.example.com/story13.mp4",
+                    "mediaUrl": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
                     "type": "video",
                     "timestamp": "2024-05-18T09:00:00Z"
                 },
@@ -127,7 +126,7 @@ export const stories = {
                 },
                 {
                     "id": "story15",
-                    "mediaUrl": "https://www.example.com/story15.mp4",
+                    "mediaUrl": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
                     "type": "video",
                     "timestamp": "2024-05-18T13:00:00Z"
                 }
@@ -153,7 +152,7 @@ export const stories = {
             "stories": [
                 {
                     "id": "story17",
-                    "mediaUrl": "https://www.example.com/story17.mp4",
+                    "mediaUrl": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
                     "type": "video",
                     "timestamp": "2024-05-18T12:00:00Z"
                 },
@@ -178,7 +177,7 @@ export const stories = {
                 },
                 {
                     "id": "story20",
-                    "mediaUrl": "https://www.example.com/story20.mp4",
+                    "mediaUrl": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
                     "type": "video",
                     "timestamp": "2024-05-18T13:00:00Z"
                 }
@@ -191,7 +190,7 @@ export const stories = {
             "stories": [
                 {
                     "id": "story21",
-                    "mediaUrl": "https://www.example.com/story21.mp4",
+                    "mediaUrl": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
                     "type": "video",
                     "timestamp": "2024-05-18T11:00:00Z"
                 },
@@ -203,7 +202,7 @@ export const stories = {
                 },
                 {
                     "id": "story23",
-                    "mediaUrl": "https://www.example.com/story23.mp4",
+                    "mediaUrl": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
                     "type": "video",
                     "timestamp": "2024-05-18T13:00:00Z"
                 },
