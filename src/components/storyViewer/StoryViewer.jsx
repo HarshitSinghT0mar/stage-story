@@ -5,17 +5,17 @@ import { FaAngleRight, FaAngleLeft } from "react-icons/fa";
 import Avatar from '../ui/Avatar';
 import StoryMedia from './SotryMedia';
 import StoryProgress from '../ui/StoryProgress';
+import { getNextUserStory } from '../../utils/helper';
 
 const StoryViewer = ({ stories }) => {
   const { userId, storyId } = useParams();
   const navigate = useNavigate();
-  const [progress, setProgress] = useState(0);
-  const [progressBars, setProgressBars] = useState([]);
 
   const userIndex = stories.users.findIndex(user => user.username === userId);
   const user = stories.users[userIndex];
   const storyIndex = user ? user.stories.findIndex(story => story.id === storyId) : -1;
   const story = user.stories[storyIndex];
+  const nextUserStory = getNextUserStory(stories, userIndex, storyIndex)?.story
 
 
 
@@ -24,9 +24,7 @@ const StoryViewer = ({ stories }) => {
       nextStory();
     }, 5000);
 
-    // const progressTimerId = setTimeout(() => {
-    //   setProgress(prev => prev + 10)
-    // }, 500)
+ 
 
     return () => {
       clearTimeout(timer)
@@ -58,7 +56,7 @@ const StoryViewer = ({ stories }) => {
     <div className='h-screen w-screen sm:w-52 sm:h-72 flex flex-col justify-center items-start relative'>
       <StoryProgress user={user} story={ story} />
       <Avatar user={user} />
-      <StoryMedia story={story} />
+      <StoryMedia story={story} nextStory={nextUserStory} />
       <button className='absolute left-1 z-10 top-1/2 bg-gray-300 rounded-full flex items-center justify-center w-5 h-5' onClick={prevStory}><FaAngleLeft /></button>
       <button className='absolute right-1 z-10 top-1/2 bg-gray-300 rounded-full flex items-center justify-center w-5 h-5' onClick={nextStory}><FaAngleRight /></button>
     </div>

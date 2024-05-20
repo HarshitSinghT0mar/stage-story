@@ -32,7 +32,7 @@ const StoryProgress = ({ user, story }) => {
     };
 
     return (
-        <div className='w-full flex absolute top-2 px-2'>
+        <div className='w-full flex absolute top-2 px-2 z-10'>
             {user?.stories?.map((s, index) => (
                 <Line
                     key={s?.id}
