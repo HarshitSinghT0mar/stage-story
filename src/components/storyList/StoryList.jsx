@@ -6,7 +6,7 @@ import StoryListItem from './StoryListItem'
 const StoryList = ({ stories, onStoryClick }) => {
   
   return (
-      <div className='flex gap-6 overflow-x-scroll'>
+      <div className='flex p-2 gap-6 overflow-x-scroll'>
           {stories?.users?.map((user, index) => {
             return <StoryListItem user={ user} key={index} onClick={()=>onStoryClick(user)}  />
           })}
