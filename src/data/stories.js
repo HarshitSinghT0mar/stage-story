@@ -51,7 +51,7 @@ export const stories = {
             "stories": [
                 {
                     "id": "story6",
-                    "mediaUrl": "https://picsum.photos/200/303",
+                    "mediaUrl": "https://picsum.photos/200/314",
                     "type": "image",
                     "timestamp": "2024-05-18T10:00:00Z"
                 }

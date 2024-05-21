@@ -1,8 +1,6 @@
 import React from 'react'
 import StoryListItem from './StoryListItem'
 
-
-
 const StoryList = ({ stories, onStoryClick }) => {
   
   return (
