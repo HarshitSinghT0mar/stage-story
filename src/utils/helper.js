@@ -1,18 +1,3 @@
-export const getMediaType = (url) => {
-    const imageExtensions = ['jpg', 'jpeg', 'png', 'gif', 'bmp', 'webp'];
-    const videoExtensions = ['mp4', 'webm', 'ogg', 'mov'];
-
-    const extension = url?.split('.')?.pop()?.toLowerCase();
-
-    if (imageExtensions.includes(extension)) {
-        return 'image';
-    } else if (videoExtensions.includes(extension)) {
-        return 'video';
-    } else {
-        return 'image';
-    }
-};
-
 export const getNextUserStory = (stories, userIndex, storyIndex) => {
     if (userIndex === -1 || storyIndex === -1) return null;
 

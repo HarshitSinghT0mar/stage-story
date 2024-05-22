@@ -11,7 +11,7 @@ import { useStoryViewerController } from './storyViewer.controller';
 
 const StoryViewer = () => {
   const controller = useStoryViewerController()
-  const { muted, setMuted, prevStory, nextStory, mediaType } = controller || {}
+  const { muted, setMuted, prevStory, nextStory, story} = controller || {}
 
 
   return (
@@ -20,7 +20,7 @@ const StoryViewer = () => {
       <div>
         <Avatar {...controller} />
         <div className='flex gap-4 absolute top-8 font-extrabold right-4 z-10 text-xl text-white'>
-          {mediaType === 'video' && <div onClick={() => setMuted(prev => !prev)}>
+          {story?.type=== 'video' && <div onClick={() => setMuted(prev => !prev)}>
             {!muted ? <FaVolumeHigh />
               : <FaVolumeMute />}
           </div>}

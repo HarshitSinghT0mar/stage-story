@@ -1,26 +1,17 @@
-export const preloadImage = (src) => {
+export const preloadMedia = (url, type) => {
     return new Promise((resolve, reject) => {
-        const img = new Image()
-        img.src = src
-        img.onload = () => resolve()
-        img.onerror = (err) => reject(err)
-    })
-}
-
-export const preloadMedia = (src, mediaType) => {
-    return new Promise((resolve, reject) => {
-
-        if (mediaType==='video') {
-            const video = document.createElement('video');
-            video.src = src;
-            video.onloadeddata = () => resolve();
-            video.onerror = (err) => reject(err);
-            video.load();
-        } else if(mediaType==='image') {
+        if (type === 'image') {
             const img = new Image();
-            img.src = src;
-            img.onload = () => resolve();
-            img.onerror = (err) => reject(err);
+            img.src = url;
+            img.onload = resolve;
+            img.onerror = reject;
+        } else if (type === 'video') {
+            const video = document.createElement('video');
+            video.src = url;
+            video.onloadeddata = resolve;
+            video.onerror = reject;
         }
     });
 };
+
+

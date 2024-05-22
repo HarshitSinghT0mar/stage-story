@@ -1,8 +1,8 @@
 import { useNavigate, useParams } from "react-router";
-import { getMediaType, getNextUserStory } from "../../utils/helper";
+import { getNextUserStory } from "../../utils/helper";
 import { stories } from "../../data/stories";
 import { useEffect, useState } from "react";
-import { preloadImage, preloadMedia } from "../../utils/preloadImage";
+import {preloadMedia } from "../../utils/preloadImage";
 
 export const useStoryViewerController = () => {
     const { userId, storyId } = useParams();
@@ -13,15 +13,16 @@ export const useStoryViewerController = () => {
     const user = stories.users[userIndex];
     const storyIndex = user ? user.stories.findIndex(story => story.id === storyId) : -1;
     const story = user.stories[storyIndex];
-    const mediaType = getMediaType(story?.mediaUrl)
     const nextUserStory = getNextUserStory(stories, userIndex, storyIndex)?.story
-    const nextStoryMediaType=getMediaType(nextUserStory?.mediaType)
-    // preloadMedia(story.mediaUrl, mediaType).then(() => {
-    //     setIsLoaded(true)
-    // })
 
-    mediaType==='image' && preloadImage(story.mediaUrl, mediaType).then(()=>setIsLoaded(true))
-    nextStoryMediaType==='image' && preloadMedia(nextUserStory.mediaUrl, nextStoryMediaType)
+  
+
+    if (story) {
+        preloadMedia(story?.mediaUrl, story?.type).then(() => setIsLoaded(true)) 
+    }
+    if (nextUserStory) {
+        preloadMedia(nextUserStory?.mediaUrl, nextUserStory?.type)
+    }
 
 
     const nextStory = () => {
@@ -62,7 +63,6 @@ export const useStoryViewerController = () => {
         user,
         story,
         nextUserStory,
-        mediaType,
         nextStory,
         prevStory,
         isLoaded
