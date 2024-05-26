@@ -2,7 +2,7 @@
 import React from 'react';
 import { FaAngleRight, FaAngleLeft, FaVolumeMute } from "react-icons/fa";
 import Avatar from '../ui/Avatar';
-import StoryMedia from './SotryMedia';
+import StoryMedia from './StoryMedia';
 import StoryProgress from '../ui/StoryProgress';
 import { RxCross2 } from 'react-icons/rx';
 import { Link } from 'react-router-dom';

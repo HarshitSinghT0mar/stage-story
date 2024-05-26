@@ -302,7 +302,7 @@ export const stories = {
             "username": "Oscar",
             "userImage": "https://i.pravatar.cc/300?u=user15",
             "stories": [
-               
+
                 {
                     "id": "story34",
                     "mediaUrl": "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4",

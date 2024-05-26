@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router"
-import { stories } from "./storyList.data"
+import { stories } from "../../data/stories"
 
 export const useStoryListController = () => {
     const navigate = useNavigate()
