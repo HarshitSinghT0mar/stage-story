@@ -15,7 +15,7 @@ const StoryViewer = () => {
 
 
   return (
-    <div className='h-screen w-screen sm:w-52 sm:h-72 flex flex-col justify-center items-start relative'>
+    <div className='h-screen w-screen sm:w-[22%] sm:h-[calc(100vh-7rem)] flex flex-col justify-center items-start relative'>
       <StoryProgress {...controller} />
       <div>
         <Avatar {...controller} />

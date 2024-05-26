@@ -9,7 +9,7 @@ const StoryMedia = ({ story, muted, isLoaded }) => {
 
   return (
     <div className='w-full h-full relative'>
-      {story?.type === 'image' && <img src={story?.mediaUrl} alt="Media Content" className='object-cover w-full h-full bg-black' />}
+      {story?.type === 'image' && <img src={story?.mediaUrl} alt="Media Content" className='object-cover sm:object-contain w-full h-full bg-black' />}
       {story?.type === 'video' && (
         <div className='w-full h-full'>
           <video

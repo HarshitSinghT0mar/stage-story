@@ -120,7 +120,7 @@ export const stories = {
                 },
                 {
                     "id": "story14",
-                    "mediaUrl": "https://farm4.staticflickr.com/3827/11349066413_99c32dee4a_z_d.jpg",
+                    "mediaUrl": "https://farm4.staticflickr.com/3852/14447103450_2d0ff8802b_z_d.jpg",
                     "type": "image",
                     "timestamp": "2024-05-18T11:00:00Z"
                 },
