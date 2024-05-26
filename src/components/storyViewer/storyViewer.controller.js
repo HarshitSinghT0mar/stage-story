@@ -9,13 +9,22 @@ export const useStoryViewerController = () => {
     const navigate = useNavigate();
     const [isLoaded,setIsLoaded]=useState(false)
     const [muted, setMuted] = useState(true)
+
+    // find current user and story
     const userIndex = stories.users.findIndex(user => user.username === userId);
     const user = stories.users[userIndex];
     const storyIndex = user ? user.stories.findIndex(story => story.id === storyId) : -1;
     const story = user.stories[storyIndex];
+
+    //find next user in order to preload for smooth interaction
     const nextUserStory = getNextUserStory(stories, userIndex, storyIndex)?.story
 
-  
+    //check if its the last story in the database
+    const isLastUserLastStory = () => {
+        return userIndex === stories.users.length - 1 && storyIndex === user.stories.length - 1;
+    };
+
+    //preload media beforehand
 
     if (story) {
         preloadMedia(story?.mediaUrl, story?.type).then(() => setIsLoaded(true)) 
@@ -25,7 +34,11 @@ export const useStoryViewerController = () => {
     }
 
 
+   //navigates users to the next story's route
     const nextStory = () => {
+        if (isLastUserLastStory()) {
+            return
+        }
         if (user && storyIndex < user.stories.length - 1) {
             navigate(`/stories/${user.username}/${user.stories[storyIndex + 1].id}`);
         } else if (userIndex < stories.users.length - 1) {
@@ -34,6 +47,7 @@ export const useStoryViewerController = () => {
         }
     };
 
+    //navigates users to the previous story's route
     const prevStory = () => {
         if (user && storyIndex > 0) {
             navigate(`/stories/${user.username}/${user.stories[storyIndex - 1].id}`);
@@ -43,14 +57,18 @@ export const useStoryViewerController = () => {
         }
     };
 
-    useEffect(() => {
+    // move to next story every 5 seconds
+    
+    useEffect(function autoMoveToNextStory() {
         const timer = setTimeout(() => {
-            nextStory();
+            if (!isLastUserLastStory()) {
+                nextStory();
+            }
         }, 5000);
 
         return () => {
-            clearTimeout(timer)
-        }
+            clearTimeout(timer);
+        };
     }, [userIndex, storyIndex]);
 
     return {
